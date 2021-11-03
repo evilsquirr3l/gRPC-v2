@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "gRPC_v2";
+
+package telnet;
+
+service Telnet {
+  rpc SendRequest (Request) returns (Reply);
+}
+
+message Request {
+  string message = 1;
+}
+
+message Reply {
+  string message = 1;
+}
